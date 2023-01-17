@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
+
         Console.WriteLine("Welcome to your journal app.");
         Console.WriteLine("Please choose from the following menu:");
         Console.WriteLine("1. Write");
