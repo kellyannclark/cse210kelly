@@ -1,6 +1,6 @@
 using System;
 
- class Program
+class Prompts
 {
     static void Main (string[] args)
     {
@@ -11,19 +11,4 @@ using System;
 
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -1,11 +1,13 @@
 using System;
 
 class Program
-{
-    static void Main(string[] args)
-    {
 
-        Console.WriteLine("Welcome to your journal app.");
+{   
+    string menu_option;
+
+    static void Main()
+    {
+        Console.WriteLine("Welcome to your journal app.");                      
         Console.WriteLine("Please choose from the following menu:");
         Console.WriteLine("1. Write");
         Console.WriteLine("2. Display");
@@ -13,13 +15,7 @@ class Program
         Console.WriteLine("4. Save");
         Console.WriteLine("5. Quit");
         Console.Write(">");
-        
-        string menu_option = Console.ReadLine();
 
-
-
-
-
-
+        menu_option = Console.ReadLine;
     }
 }
