@@ -1,6 +1,6 @@
 using System;
 
-class File-Handling
+class FileHandling
 {
     static void Main ()
     {
