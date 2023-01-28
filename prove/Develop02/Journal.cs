@@ -35,18 +35,18 @@ class Journal
         }
     }
 
-    public void save(string date, string prompt, string userInput) //create a function to save the file
+    //public void save(string date, string prompt, string userInput) //create a function to save the file
 
-    {
-        Console.Write("Enter filename: "); //ask user for filename
-        string fileName = Console.ReadLine(); //read filename and assign it to fileName
-        using (StreamWriter save = new StreamWriter(fileName)) //using StreamWriter create a new entry in fileName
+    //{
+        //Console.Write("Enter filename: "); //ask user for filename
+        //string fileName = Console.ReadLine(); //read filename and assign it to fileName
+        //using (StreamWriter save = new StreamWriter(fileName)) //using StreamWriter create a new entry in fileName
         
-        foreach (string item in allInfo)
-        {
-            save.Write($"{item._date}|{item._prompt}|{item._userInput}");
-        }
-    }
+        //foreach (string item in allInfo)
+        //{
+            //save.Write($"{item._date}|{item._prompt}|{item._userInput}");
+        //}
+   // }
         
 
     public void load() //create a function to load the file
