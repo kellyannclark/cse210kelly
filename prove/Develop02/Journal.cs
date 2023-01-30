@@ -35,30 +35,31 @@ class Journal
         }
     }
 
-    //public void save(string date, string prompt, string userInput) //create a function to save the file
+    public void save(string date, string prompt, string userInput) //create a function to save the file
 
-    //{
-        //Console.Write("Enter filename: "); //ask user for filename
-        //string fileName = Console.ReadLine(); //read filename and assign it to fileName
-        //using (StreamWriter save = new StreamWriter(fileName)) //using StreamWriter create a new entry in fileName
+    {
+        Console.Write("Enter filename: "); //ask user for filename
+        string fileName = Console.ReadLine(); //read filename and assign it to fileName
+        using (StreamWriter save = new StreamWriter(fileName, true)) //using StreamWriter create a new entry in fileName
         
-        //foreach (string item in allInfo)
-        //{
-            //save.Write($"{item._date}|{item._prompt}|{item._userInput}");
-        //}
-   // }
+        {
+            save.WriteLine($"{date}| {prompt}| {userInput}");
+        }
+    }
         
 
     public void load() //create a function to load the file
     {
-        string fileName = "journal.txt"; //create a var fileName to hold the file name
-        string[] lines = System.IO.File.ReadAllLines("fileName"); //create a var lines to hold each line in an array
-        using (StreamReader read = new StreamReader(fileName))
-        foreach (string item in lines) //iterates through each line
+    string fileName = "journal.txt"; //create a var fileName to hold the file name
+    string[] lines = System.IO.File.ReadAllLines(fileName); //create a var lines to hold each line in an array
+    List<string[]> allInfo = new List<string[]>();
+    using (StreamReader read = new StreamReader(fileName))
+    {
+        foreach (string line in lines) //iterates through each line
         {   
-            List <string> allInfo = item.Split("|").ToList();
-
+            allInfo.Add(line.Split(" | "));
         }
     }
     
+    }
 }
