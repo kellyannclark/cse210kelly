@@ -39,10 +39,10 @@ class Program
             {
                 journal.load();
             }
-            else if (menu_option == "4")
-            {
-                journal.save(journal.date, journal.prompt, journal.userInput);
-            }
+            //else if (menu_option == "4")
+            //{
+                //journal.save(journal.date, journal.prompt, journal.userInput);
+            //}
             else if (menu_option == "5")
             {
                 string scripture = scriptures.getScrip();
