@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
+
+
 public class ScriptureCollection
 {
     private List<Scripture> _scriptures = new List<Scripture>();
@@ -19,7 +21,7 @@ public class ScriptureCollection
         foreach (string line in lines)
         {
             // Split the line into two parts: the reference and the text
-            string[] parts = line.Split('\t');
+            string[] parts = line.Split('|');
             string reference = parts[0];
             string firstVerse = parts[1];
             string secondVerse = parts[2];

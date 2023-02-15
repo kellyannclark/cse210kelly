@@ -15,19 +15,42 @@ class Program
 
         user_go = Console.ReadLine();
 
-        while (user_go == "go")
+        // Call the GetRandomScripture method to get a random scripture
+        Scripture randomScripture = scriptureCollection.GetRandomScripture();
+
+        // Display the reference and text of the random scripture
+        Console.WriteLine("Reference: " + randomScripture.Reference);
+        Console.WriteLine("First Verse: " + randomScripture.FirstVerse);
+        Console.WriteLine("Second Verse: " + randomScripture.SecondVerse);
+
+        // Split the scripture text into an array of words
+        string[] words = randomScripture.Text.Split(' ');
+
+        while (words.Length > 0)
         {
-            // Call the GetRandomScripture method to get a random scripture
-            Scripture randomScripture = scriptureCollection.GetRandomScripture();
-
-            // Display the reference and text of the random scripture
-            Console.WriteLine("Reference: " + randomScripture.Reference);
-            Console.WriteLine("Text: " + randomScripture.Text);
-
             // Prompt the user to continue or quit
-            Console.WriteLine("Press 'go' to see another random scripture, or any other key to quit.");
-            user_go = Console.ReadLine();
+            Console.WriteLine("Press any key to remove three words or 'q' to quit.");
+
+            string userInput = Console.ReadLine();
+
+            if (userInput == "q")
+            {
+                return;
+            }
+
+            // Randomly remove three words from the text
+            Random random = new Random();
+            for (int i = 0; i < 3 && words.Length > 0; i++)
+            {
+                int indexToRemove = random.Next(0, words.Length);
+                words[indexToRemove] = "";
+            }
+
+            // Remove the empty strings from the array
+            words = words.Where(w => !string.IsNullOrEmpty(w)).ToArray();
+
+            // Print the updated text
+            Console.WriteLine(string.Join(" ", words));
         }
     }
 }
-
