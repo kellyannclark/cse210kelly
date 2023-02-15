@@ -7,13 +7,13 @@ class Program
         // Create a new instance of the ScriptureCollection class
         ScriptureCollection scriptureCollection = new ScriptureCollection();
 
-        string user_go = "";
+        string user_go = ""; //Create a variable for user_go
 
-        Console.WriteLine("Welcome to your scripture memorizer!");
+        Console.WriteLine("Welcome to your scripture memorizer!");  //WriteLine to print output
         Console.WriteLine("Type 'go' to have the random selector choose either a single scripture or multiple verses.");
         Console.WriteLine("The program will quit when all the words disappear.");
 
-        user_go = Console.ReadLine();
+        user_go = Console.ReadLine(); //Take user input
 
         // Call the GetRandomScripture method to get a random scripture
         Scripture randomScripture = scriptureCollection.GetRandomScripture();
