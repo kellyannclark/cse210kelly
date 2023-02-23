@@ -47,7 +47,7 @@ namespace library_demo
 
         public string GetPictureBookInfo()
         {
-            return $"{_title} by {_author} illustrated by {_illustrator};
+            return $"{_title} by {_author} illustrated by {_illustrator}";
         }
     }
 }
