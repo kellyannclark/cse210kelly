@@ -7,7 +7,7 @@ class Program
         Assignment assignment1 = new Assignment("John Smith", "History");
         Console.WriteLine(assignment1.GetSummary());
         
-         MathAssignment mathAssignment = new MathAssignment("John Smith", "Math", "Eight", "10-25");
+        MathAssignment mathAssignment = new MathAssignment("John Smith", "Math", "Eight", "10-25");
         Console.WriteLine(mathAssignment.GetHomework());
         Console.WriteLine(mathAssignment.GetSummary());
     
