@@ -28,8 +28,11 @@ class Program
             if (menu_option == "2")
             {
                 Console.WriteLine("Reflection Activity: This activity will help you reflect on times of strength in your life.");
-                Console.WriteLine("Please enter the duration of your activity in seconds: ")
+                Console.WriteLine("Please enter the duration of your activity in seconds: ");
                 int duration = int.Parse(Console.ReadLine());
+                Reflection reflection1 = new Reflection("Reflection Activity", "This activity will help you reflect on your personal strength", duration);
+                reflection1.Start();
+                Console.Write($"Well done! \n You have completed {duration} seconds of the Reflection Activity.\n");
             }
             if (menu_option == "3")
             {
