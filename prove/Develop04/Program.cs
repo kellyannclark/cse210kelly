@@ -36,7 +36,12 @@ class Program
             }
             if (menu_option == "3")
             {
-                
+                Console.WriteLine("Listing Activity: This activity will help you by listing and recording your spiritual moments.");
+                Console.WriteLine("Please enter the duration of your activity in seconds: ");
+                int duration = int.Parse(Console.ReadLine());
+                Listing listing1 = new Listing("Listing Activity:", "This activity will help you by listing and recording your spiritual moments.", duration);
+                listing1.Start();
+                Console.Write($"Well done! \n You have completed {duration} seconds of the LIsting Activity.\n");
             }
         }
     }   

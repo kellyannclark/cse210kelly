@@ -34,11 +34,11 @@ public class Activity
     }
 
     public int GetDuration() //Getter
-{
+    {
     
         return _duration;
     
-}
+    }
 
     public void SetDuration(int duration) //Setter
     {
