@@ -2,25 +2,25 @@ using System;
 
 public class Shape
 {
-    string _shape = "";
+    string _color = "";
 
-    public Shape(string shape) //Constructor
+    public Shape(string color) //Constructor
     {
-     _shape = shape;
+     _color = color;
     }
 
-    public string GetShape() //Getter
+    public string GetColor() //Getter
     {
-    return _shape
+    return _color;
     }
 
-    public void SetShape(string shape) //Setter
+    public void SetColor(string color) //Setter
     {
-    _shape = shape;
+    _color = color;
     }
 
     public virtual float GetArea() 
     {
-        return 0.0;
+        return 0.0f;
     }
 }
